@@ -7,3 +7,10 @@ stages:
     outs:
     - data/processed.csv
     - registry/train_stats.json
+  train:
+    cmd: python3 src/train.py
+    deps:
+    - data/processed.csv
+    - src/train.py
+    outs:
+    - models
